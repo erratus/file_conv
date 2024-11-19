@@ -1,3 +1,5 @@
+An all-inclusive file converting web-based app capable of converting a huge variety of files
+
 project-root/
 ├── flask-backend/         
 │   ├── flask_app.py       
