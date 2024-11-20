@@ -23,3 +23,10 @@ project-root/
 │   ├── package.json      
 │   └── package-lock.json 
 └── README.md             
+
+
+
+procedure
+backend- cd to location, initiate virtual environment and run python file
+middleware - cd to location, <node app.js>
+frontend- cd to location, <npm run dev>
