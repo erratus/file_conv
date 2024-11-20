@@ -1,14 +1,14 @@
-import React from "react";
-import FileUpload from "./components/fileUpload.jsx";
-import "./index.css";
+import React from 'react';
+import FileUploader from './components/fileupload.jsx';
+// import './index.css'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>File Converter</h1>
-      <FileUpload />
+    <div>
+      <FileUploader />
     </div>
   );
-}
+};
 
 export default App;
