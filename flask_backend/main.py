@@ -2,6 +2,7 @@ from flask import Flask, request, send_file
 from flask_cors import CORS
 import os
 from PIL import Image
+import traceback
 
 # Initialize Flask app and enable CORS
 app = Flask(__name__)
@@ -24,6 +25,9 @@ def convert_image():
     allowed_formats = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'bmp']
     if output_format not in allowed_formats:
         return {"error": f"Unsupported format '{output_format}'. Allowed formats: {', '.join(allowed_formats)}"}, 400
+    
+    if output_format == 'jpg':
+        output_format = 'jpeg'
 
     # Save the uploaded file temporarily
     input_file_path = os.path.join(TEMP_FOLDER, uploaded_file.filename)
@@ -36,11 +40,14 @@ def convert_image():
     try:
         # Convert the image using Pillow
         with Image.open(input_file_path) as img:
-            if img.mode!="RGB":
-                img = img.convert("RGB")  # Ensure compatibility with formats like JPEG
+            img = img.convert("RGB")  # Ensure compatibility with formats like JPEG
             img.save(output_file_path, format=output_format.upper())
     except Exception as e:
-        return {"error": f"Image conversion failed: {str(e)}"}, 500
+        error_message = f"Image conversion failed: {str(e)}"
+        # Log the full traceback for better debugging
+        print(error_message)
+        print(traceback.format_exc())
+        return {"error": error_message}, 500
     finally:
         os.remove(input_file_path)  # Clean up input file
 
