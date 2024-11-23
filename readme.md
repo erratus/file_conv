@@ -6,11 +6,6 @@ project-root/
 │   ├── temp/               
 │   ├── requirements.txt  
 │   └── venv/              
-├── express-backend/        
-│   ├── express_app.js     
-│   ├── uploads/            
-│   ├── package.json       
-│   └── package-lock.json   
 ├── react-frontend/       
 │   ├── public/           
 │   │   ├── index.html     
