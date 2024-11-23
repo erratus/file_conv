@@ -1,6 +1,7 @@
-An all-inclusive file converting web-based app capable of converting a huge variety of files
-
-project-root/
+<h3>An all-inclusive file converting web-based app capable of converting a huge variety of files</h3>
+<br>
+<h2>
+<b>project-root</b></h2>/
 ├── flask-backend/         
 │   ├── flask_app.py       
 │   ├── temp/               
@@ -22,8 +23,7 @@ project-root/
 └── README.md             
 
 
-
+<br>
 procedure
 backend- cd to location, initiate virtual environment and run python file
-middleware - cd to location, <node app.js>
 frontend- cd to location, <npm run dev>
