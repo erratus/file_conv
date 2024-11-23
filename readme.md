@@ -2,6 +2,7 @@
 <br>
 <h2>
 <b>project-root</b></h2>/
+<br>
 ├── flask-backend/         
 │   ├── flask_app.py       
 │   ├── temp/               
